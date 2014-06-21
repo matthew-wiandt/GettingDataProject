@@ -1,6 +1,3 @@
-
-#1 check whether file exists
-#2 download zip file if necessary
 #3 write descriptive variables names
 #4 check for NA's in the data
 #5 write code book
@@ -8,16 +5,23 @@
 
 library(reshape2)
 
-#Check for existance of data directory. If directory doesn't exist, create it.
-if(!file.exists("./UCI HAR Dataset")){dir.create("./UCI HAR Dataset")}
-#https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+#Check for existance of data directory. 
+#If directory doesn't exist, create directory, download and unzip file.
+if(!file.exists("./UCI HAR Dataset"))
+    {dir.create("./UCI HAR Dataset")
+    fileurl = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+    local_file <- "samsung.zip"
+    download.file(url = fileurl, destfile=local_file)
+    unzip(local_file)
+}
 
 #Read in datasets
     #Read in test data (2947 rows and 561 columns) 
     #and training data (7352 rows and 561 columns).
-    #Combine test and training datasets
     data_train <- read.table("./UCI HAR Dataset/train/X_train.txt") #training data
     data_test <- read.table("./UCI HAR Dataset/test/X_test.txt") #test data
+
+    #Combine training and test datasets with train data at the top
     data <- rbind(data_train,data_test)
     
     #Add variable names to the combined test and training data
@@ -29,13 +33,13 @@ if(!file.exists("./UCI HAR Dataset")){dir.create("./UCI HAR Dataset")}
     #Filter the data for the mean and standard deviation variables 
     
 
-    #identify the columns with mean and standard deviation CLARIFY WHY I DIDN"T INCL meanFreq
+    #Identified the columns with mean and standard deviation
     columns <- grep("mean\\()|std\\()",var_lower)
     data2 <- data[,columns]    
 
-    #add subject and activities columns
+    #Combine the training and test data and
+    #add columns which identify subject and activities
     activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt",header=F)
-    #activity_labels <- tolower(activity_labels)
     names(activity_labels) <- c("index","activity")
     activities_train <- read.table("./UCI HAR Dataset/train/y_train.txt") #list of activities for train_data
     activities_test <- read.table("./UCI HAR Dataset/test/y_test.txt") #list of activities for test_data
@@ -46,8 +50,6 @@ if(!file.exists("./UCI HAR Dataset")){dir.create("./UCI HAR Dataset")}
     subjects_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
     subjects_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
     subjects <- rbind(subjects_train,subjects_test)
-    #subjects_index <- 1:nrow(subjects)
-    #subjects <- cbind(subjects_index,subjects)
     colnames(subjects) <- c("subjects")
     
     data3 <- cbind(subjects,activities,data2)

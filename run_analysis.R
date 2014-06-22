@@ -1,8 +1,3 @@
-#3 write descriptive variables names
-#4 check for NA's in the data
-#5 write code book
-#6 write mark down document Read.Me
-
 library(reshape2)
 
 #Check for existance of data directory. 
@@ -30,11 +25,10 @@ if(!file.exists("./UCI HAR Dataset"))
     var_lower <- tolower(variables)
     colnames(data) <- var_lower
     
-    #Filter the data for the mean and standard deviation variables 
-    
-
-    #Identified the columns with mean and standard deviation
+    #Identify the columns with mean and standard deviation
     columns <- grep("mean\\()|std\\()",var_lower)
+
+    #Filter the data for the mean and standard deviation variables 
     data2 <- data[,columns]    
 
     #Combine the activities identifier across training and test datasets
@@ -61,15 +55,31 @@ if(!file.exists("./UCI HAR Dataset"))
     #reorder the columns to put the subject first
     data6 <- data5[,c(2,1,3:68)]
 
-#do I need to worry about missing data? check for missing data
+    #Sum the data by subject and activity
+    data7 <- aggregate(.~subjects+activity,FUN = mean,data=data6)
 
-#change the names to be more descriptive
+    #Order data by subject
+    finaldata <- data7[order(data7$subjects),]    
 
-#Sum the data by subject and activity
-data7 <- aggregate(.~subjects+activity,FUN = mean,data=data6)
+    #Create understandable variable names
+    names(finaldata) = tolower(names(finaldata))
+    names(finaldata) <- sub("-x"," on x-axis",names(finaldata))
+    names(finaldata) <- sub("-y"," on y-axis",names(finaldata))
+    names(finaldata) <- sub("-z"," on z-axis",names(finaldata))
+    names(finaldata) <- sub("bodybody","body",names(finaldata))
+    names(finaldata) <- sub("acc"," acceleration ",names(finaldata))
+    names(finaldata) <- sub("-std\\()"," standard deviation",names(finaldata))
+    names(finaldata) <- sub("-mean\\()"," mean",names(finaldata))
+    names(finaldata) <- sub("mag"," magnitude",names(finaldata))
+    names(finaldata) <- sub("gyro"," gyroscope",names(finaldata))
+    names(finaldata) <- sub("tbody","time domain signal body",names(finaldata))
+    names(finaldata) <- sub("tgravity","time domain signal gravity",names(finaldata))
+    names(finaldata) <- sub("fbody","Fast Fourier Transform body",names(finaldata))
+    names(finaldata) <- sub("acceleration  magnitude","acceleration magnitude",names(finaldata))
+    names(finaldata) <- sub("acceleration  mean","acceleration mean",names(finaldata))
+    names(finaldata) <- sub("acceleration  standard","acceleration standard",names(finaldata))
+    names(finaldata) <- sub("gyroscopejerk","gyroscope jerk",names(finaldata))
+    names(finaldata) <- sub("gyroscopestandard","gyroscope standard",names(finaldata))
 
-#Order data by subject ID
-finaldata <- data7[order(data7$subjects),]    
-
-#output a tidy data file (write data_clean to an output file)
-write.table(finaldata,"./getdataproject/data/final.csv",append = FALSE,sep = ",",row.names=FALSE)     
+    #output a tidy data file
+    write.table(finaldata,"./getdataproject/data/final.csv",append = FALSE,sep = ",",row.names=FALSE)

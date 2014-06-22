@@ -5,7 +5,7 @@ subjects	Number
 	
 	Subject identification 1 - 30
 
-activity	
+activity	description
 	Specifies one of six activities:
 	
 	laying

@@ -86,4 +86,4 @@ if(!file.exists("./UCI HAR Dataset"))
     finaldata[,2] <- sub("walking_downstairs","walking downstairs",finaldata[,2])
     finaldata[,2] <- sub("walking_upstairs","walking upstairs",finaldata[,2])
     #output a tidy data file
-    write.table(finaldata,"./getdataproject/data/tidy_data.csv",append = FALSE,sep = ",",row.names=FALSE)
+    write.table(finaldata,"./getdataproject/data/tidy_data.txt",append = FALSE,sep = ",",row.names=FALSE)

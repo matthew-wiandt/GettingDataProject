@@ -16,8 +16,8 @@ activity	description
 		walking upstairs
 
 time domain signal body acceleration mean on x-axis  
-		mean time domain signal of body's acceleration in the x axis  
-		value between -1.0 to 1.0  
+    		mean time domain signal of body's acceleration in the x axis  
+    		value between -1.0 to 1.0  
 
 time domain signal body acceleration mean on y-axis  
 	mean time domain signal of body's acceleration in the y axis  

@@ -60,6 +60,8 @@ The data set includes 2 documentation files (#1-2), 2 files with variable names 
 9. 'X_test.txt': 561 columns of test data 
 10. 'y_test.txt': row labels for test data which identify the subject and activity for each observation in the test data 
 
+The train and test directories each include a directory called Inertia Signals. The files included in these directories were not included in the analysis based on the description found in this article: http://www.jucs.org/jucs_19_9/energy_efficient_smartphone_based/jucs_19_09_1295_1314_anguita.pdf
+
 
 #Data Processing Steps
 

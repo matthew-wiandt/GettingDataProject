@@ -15,31 +15,31 @@ activity	description
 	walking downstairs
 	walking upstairs
 
-time domain signal body acceleration mean on x-axis			
+time domain signal body acceleration mean on x-axis
 	mean time domain signal of body's acceleration in the x axis
 	value between -1.0 to 1.0
 
-time domain signal body acceleration mean on y-axis			
-	mean time domain signal of body's acceleration in the y axis	
+time domain signal body acceleration mean on y-axis
+	mean time domain signal of body's acceleration in the y axis
 	value between -1.0 to 1.0
 
-time domain signal body acceleration mean on z-axis			
+time domain signal body acceleration mean on z-axis
 	mean time domain signal of body's acceleration in the z axis
 	value between -1.0 to 1.0
 
-time domain signal body acceleration standard deviation on x-axis	
+time domain signal body acceleration standard deviation on x-axis
 	standard deviation of time domain signal of body's acceleration in the x axis
 	value between -1.0 to 1.0
 
-time domain signal body acceleration standard deviation on y-axis	
+time domain signal body acceleration standard deviation on y-axis
 	standard deviation of time domain signal of body's acceleration in the y axis
 	Value between -1.0 to 1.0
 
-time domain signal body acceleration standard deviation on z-axis	
+time domain signal body acceleration standard deviation on z-axis
 	standard deviation of time domain signal of body's acceleration in the z axis
 	value between -1.0 to 1.0
 
-time domain signal gravity acceleration mean on x-axis			
+time domain signal gravity acceleration mean on x-axis
 	mean time domain signal of acceleration due to gravity in the x axis
 	value between -1.0 to 1.0
 

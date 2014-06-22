@@ -1,23 +1,23 @@
 ##Data Dictionary - Getting_Data_Project_Tidy_Data
 
-subjects	Number
-	Identifies which of 30 volunteers generated the data
+subjects		Number  
+		Identifies which of 30 volunteers generated the data
 	
-	Subject identification 1 - 30
+		Subject identification 1 - 30
 
-activity	description
+activity	description  
 	Specifies one of six activities:
 	
-	laying
-	sitting
-	standing
-	walking
-	walking downstairs
-	walking upstairs
+		laying
+		sitting
+		standing
+		walking
+		walking downstairs
+		walking upstairs
 
 time domain signal body acceleration mean on x-axis  
-	mean time domain signal of body's acceleration in the x axis  
-	value between -1.0 to 1.0  
+		mean time domain signal of body's acceleration in the x axis  
+		value between -1.0 to 1.0  
 
 time domain signal body acceleration mean on y-axis  
 	mean time domain signal of body's acceleration in the y axis  

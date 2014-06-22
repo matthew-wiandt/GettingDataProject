@@ -81,5 +81,9 @@ if(!file.exists("./UCI HAR Dataset"))
     names(finaldata) <- sub("gyroscopejerk","gyroscope jerk",names(finaldata))
     names(finaldata) <- sub("gyroscopestandard","gyroscope standard",names(finaldata))
 
+    #Convert activity names to lower case and remove underscores    
+    finaldata[,2] <- tolower(finaldata[,2])
+    finaldata[,2] <- sub("walking_downstairs","walking downstairs",finaldata[,2])
+    finaldata[,2] <- sub("walking_upstairs","walking upstairs",finaldata[,2])
     #output a tidy data file
-    write.table(finaldata,"./getdataproject/data/final.csv",append = FALSE,sep = ",",row.names=FALSE)
+    write.table(finaldata,"./getdataproject/data/tidy_data.csv",append = FALSE,sep = ",",row.names=FALSE)

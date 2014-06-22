@@ -1,11 +1,11 @@
 ##Data Dictionary - Getting_Data_Project_Tidy_Data
 
-subjects		        	   Number  
+subjects   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		Identifies which of 30 volunteers generated the data
 	
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		Subject identification 1 - 30
 
-activity	     		           description  
+activity   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Specifies one of six activities:
 	
 		laying

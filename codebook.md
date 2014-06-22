@@ -16,40 +16,40 @@ activity	description
 		walking upstairs
 
 time domain signal body acceleration mean on x-axis  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp    		mean time domain signal of body's acceleration in the x axis  
-    		value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    		mean time domain signal of body's acceleration in the x axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    		value between -1.0 to 1.0  
 
 time domain signal body acceleration mean on y-axis  
-	mean time domain signal of body's acceleration in the y axis  
-	value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mean time domain signal of body's acceleration in the y axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	value between -1.0 to 1.0  
 
 time domain signal body acceleration mean on z-axis  
-	mean time domain signal of body's acceleration in the z axis  
-	value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mean time domain signal of body's acceleration in the z axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	value between -1.0 to 1.0  
 
 time domain signal body acceleration standard deviation on x-axis  
-	standard deviation of time domain signal of body's acceleration in the x axis  
-	value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	standard deviation of time domain signal of body's acceleration in the x axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	value between -1.0 to 1.0  
 
 time domain signal body acceleration standard deviation on y-axis  
-	standard deviation of time domain signal of body's acceleration in the y axis  
-	Value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	standard deviation of time domain signal of body's acceleration in the y axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Value between -1.0 to 1.0  
 
 time domain signal body acceleration standard deviation on z-axis  
-	standard deviation of time domain signal of body's acceleration in the z axis  
-	value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	standard deviation of time domain signal of body's acceleration in the z axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	value between -1.0 to 1.0  
 
 time domain signal gravity acceleration mean on x-axis  
-	mean time domain signal of acceleration due to gravity in the x axis  
-	value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mean time domain signal of acceleration due to gravity in the x axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	value between -1.0 to 1.0  
 
 time domain signal gravity acceleration mean on y-axis  
-	mean time domain signal of acceleration due to gravity in the y axis  
-	value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mean time domain signal of acceleration due to gravity in the y axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	value between -1.0 to 1.0  
 
 time domain signal gravity acceleration mean on z-axis  
-	mean time domain signal of acceleration due to gravity in the z axis  
-	value between -1.0 to 1.0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mean time domain signal of acceleration due to gravity in the z axis  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	value between -1.0 to 1.0  
 
 time domain signal gravity acceleration standard deviation on x-axis  
 	standard deviation of time domain signal of acceleration due to gravity in the x axis  
